@@ -1,6 +1,6 @@
-# Node With Vuejs Fullstack Web Development Udemy course
+# Node With Vuejs-Nuxt Fullstack Web Development Udemy course
 
-> source code for the Vuejs-Next adaption from the Node With React Fullstack Web Development Udemy course
+> source code for the Vuejs-Nuxt adaption from the Node With React Fullstack Web Development Udemy course
 
 ## Build Setup
 
