@@ -12,9 +12,7 @@ module.exports = app => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-      if (process.env.NODE_ENV === 'production') return res.redirect('/surveys')
-      /* With Vue in local it does not return to client localhost port --> We force it */
-      res.redirect('http://localhost:3000/surveys')
+      return res.redirect('/surveys')
     }
   )
 

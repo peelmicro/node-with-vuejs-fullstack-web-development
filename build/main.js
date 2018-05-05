@@ -272,9 +272,7 @@ module.exports = app => {
   }));
 
   app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
-    if (false) return res.redirect('/surveys');
-    /* With Vue in local it does not return to client localhost port --> We force it */
-    res.redirect('http://localhost:3000/surveys');
+    return res.redirect('/surveys');
   });
 
   app.get('/api/logout', (req, res) => {
