@@ -50,8 +50,7 @@ module.exports = {
   },
   modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000',
-    browserBaseURL: '/api'
+    baseURL: process.env.NODE_ENV === 'production' ? process.env.HOST_NAME : 'http://localhost:3000'
   },
   env: {
     stripePublishableKey:
