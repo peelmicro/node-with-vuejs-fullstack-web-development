@@ -1,22 +1,25 @@
-# nuxt-with-node
+# Node With Vuejs Fullstack Web Development Udemy course
 
-> nuxt client version for Node with React Fullstack Web Dev
+> source code for the Vuejs-Next adaption from the Node With React Fullstack Web Development Udemy course
 
 ## Build Setup
 
-``` bash
 # install dependencies
+
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
+# execute it
+
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
+*   server and client are loaded at localhost:3000
 
-# generate static project
-$ npm run generate
-```
+# Before executing it, setting credentials and variables must be updated
 
-For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
+1st) Rename server/config/dev.example.js to dev.js
+
+2nd) Update your own values
+
+# Follow the course
+
+Follow the course on https://www.udemy.com/node-with-react-fullstack-web-development/
