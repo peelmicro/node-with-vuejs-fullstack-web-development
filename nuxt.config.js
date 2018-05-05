@@ -50,7 +50,7 @@ module.exports = {
   },
   modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.NODE_ENV === 'production' ? process.env.HOST : 'http://localhost:3000',
+    baseURL: process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000',
     browserBaseURL: '/api'
   },
   env: {
