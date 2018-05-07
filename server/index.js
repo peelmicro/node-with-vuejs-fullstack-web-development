@@ -7,6 +7,7 @@ import bodyParser from 'body-parser'
 import keys from './config/keys'
 
 require('./models/User') // Just to execute it
+require('./models/Survey') // Just to execute it
 require('./services/passport') // Just to execute it
 
 mongoose.connect(keys.mongoUri)
@@ -33,6 +34,7 @@ app.use(passport.session())
 
 require('./routes/authRoutes')(app)
 require('./routes/billingRoutes')(app)
+require('./routes/surveyRoutes')(app)
 
 // Import API Routes
 // app.use('/api', api)
