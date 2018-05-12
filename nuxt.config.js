@@ -18,7 +18,7 @@ module.exports = {
       { src: 'https://js.stripe.com/v3/' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js', '~/plugins/utils.js'],
   css: [
     '~/assets/style/app.styl'
   ],

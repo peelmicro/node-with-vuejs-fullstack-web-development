@@ -32,7 +32,7 @@
     "source-map-support": "^0.4.15",
     "stripe": "^5.8.0",
     "vue-stripe-elements": "^0.2.3",
-    "vuetify": "^1.0.0"
+    "vuetify": "^1.0.17"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

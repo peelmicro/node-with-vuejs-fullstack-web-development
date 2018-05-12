@@ -35,6 +35,17 @@ const createStore = () => {
         const res = await this.$axios.$post('/api/stripe', payload)
         commit('fetchUser', res)
         commit('setLoading', false)
+      },
+      async submitSurvey ({ dispatch, commit }, payload) {
+        commit('setLoading', true)
+        commit('setErrorMessage', '')
+        try {
+          const res = await this.$axios.$post('/api/surveys', payload)
+          commit('fetchUser', res)
+        } catch (err) {
+          commit('setErrorMessage', err.message.split('\n', 1).join(''))
+        }
+        commit('setLoading', false)
       }
     },
     getters: {

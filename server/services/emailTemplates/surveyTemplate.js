@@ -1,5 +1,5 @@
-import keys from '../../config/keys'
-export default function (survey) {
+const keys = require('../../config/keys')
+module.exports = (survey) => {
   return `
     <html>
       <body>
