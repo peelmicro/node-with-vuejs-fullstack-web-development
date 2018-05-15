@@ -48,7 +48,10 @@ module.exports = {
       }
     }
   },
-  modules: ['@nuxtjs/axios'],
+  modules: [
+    ['@nuxtjs/localtunnel', { subdomain: 'akhoiaufkjhafvdadad' }],
+    '@nuxtjs/axios'
+  ],
   axios: {
     baseURL: process.env.NODE_ENV === 'production' ? process.env.HOST_NAME : 'http://localhost:3000'
   },
