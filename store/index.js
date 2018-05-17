@@ -6,7 +6,8 @@ const createStore = () => {
       loading: false,
       errorMessage: '',
       auth: null,
-      userIsAuthenticated: false
+      userIsAuthenticated: false,
+      surveys: []
     },
     mutations: {
       setLoading (state, payload) {
@@ -18,6 +19,9 @@ const createStore = () => {
       fetchUser (state, payload) {
         state.auth = payload
         state.userIsAuthenticated = payload || payload.length !== 0
+      },
+      fetchSurveys (state, payload) {
+        state.surveys = payload
       }
     },
     actions: {
@@ -28,6 +32,17 @@ const createStore = () => {
         commit('setLoading', true)
         const res = await this.$axios.$get('/api/current_user')
         commit('fetchUser', res)
+        commit('setLoading', false)
+      },
+      async fetchSurveys ({ commit }) {
+        commit('setLoading', true)
+        commit('setErrorMessage', '')
+        try {
+          const res = await this.$axios.$get('/api/surveys')
+          commit('fetchSurveys', res)
+        } catch (err) {
+          commit('setErrorMessage', err.message.split('\n', 1).join(''))
+        }
         commit('setLoading', false)
       },
       async handleToken ({ dispatch, commit }, payload) {
@@ -60,6 +75,9 @@ const createStore = () => {
       },
       userIsAuthenticated: state => {
         return state.userIsAuthenticated
+      },
+      surveys: state => {
+        return state.surveys
       }
     }
   })

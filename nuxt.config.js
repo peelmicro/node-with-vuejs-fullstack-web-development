@@ -18,7 +18,11 @@ module.exports = {
       { src: 'https://js.stripe.com/v3/' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js', '~/plugins/utils.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/utils.js',
+    '~/plugins/vue2-filters'
+  ],
   css: [
     '~/assets/style/app.styl'
   ],
@@ -31,7 +35,8 @@ module.exports = {
   */
   build: {
     vendor: [
-      '~/plugins/vuetify.js'
+      '~/plugins/vuetify.js',
+      '~/plugins/vue2-filters.js'
     ],
     extractCSS: true,
     /*
